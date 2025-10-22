@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Datos en Python</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>📚 DataStructures</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#estructuras">Estructuras</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Domina las Estructuras de Datos</h1>
+            <p class="hero-subtitle">Aprende los conceptos fundamentales de Python de forma interactiva y visual</p>
+            <a href="#estructuras" class="cta-button">Explorar Ahora</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-image.png" alt="Estructuras de Datos">
+        </div>
+    </section>
+
+    <!-- Estructuras Section -->
+    <section id="estructuras" class="estructuras">
+        <div class="container">
+            <h2 class="section-title">Estructuras de Datos Fundamentales</h2>
+            <p class="section-subtitle">Descubre cada estructura y sus características</p>
+
+            <div class="cards-grid">
+                <!-- Conjuntos -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/sets.png" alt="Conjuntos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Conjuntos (Sets)</h3>
+                        <p>Colecciones de elementos únicos sin orden específico. Ideales para búsquedas rápidas y operaciones matemáticas.</p>
+                        <ul class="features">
+                            <li>✓ Sin duplicados</li>
+                            <li>✓ Búsqueda O(1)</li>
+                            <li>✓ Operaciones matemáticas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Diccionarios -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/dicts.png" alt="Diccionarios">
+                    </div>
+                    <div class="card-content">
+                        <h3>Diccionarios</h3>
+                        <p>Estructuras clave-valor que permiten acceso rápido a datos mediante claves únicas.</p>
+                        <ul class="features">
+                            <li>✓ Pares clave-valor</li>
+                            <li>✓ Acceso O(1)</li>
+                            <li>✓ Flexible y versátil</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pilas -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/stacks.png" alt="Pilas">
+                    </div>
+                    <div class="card-content">
+                        <h3>Pilas (Stacks)</h3>
+                        <p>Estructura LIFO (Último en entrar, primero en salir). Perfecta para historial y deshacer.</p>
+                        <ul class="features">
+                            <li>✓ LIFO</li>
+                            <li>✓ Operaciones O(1)</li>
+                            <li>✓ Historial y deshacer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Colas -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/queues.png" alt="Colas">
+                    </div>
+                    <div class="card-content">
+                        <h3>Colas (Queues)</h3>
+                        <p>Estructura FIFO (Primero en entrar, primero en salir). Ideal para procesamiento de tareas.</p>
+                        <ul class="features">
+                            <li>✓ FIFO</li>
+                            <li>✓ Operaciones O(1)</li>
+                            <li>✓ Procesamiento de tareas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Listas -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/lists.png" alt="Listas">
+                    </div>
+                    <div class="card-content">
+                        <h3>Listas</h3>
+                        <p>Colecciones ordenadas y mutables. La estructura más versátil y comúnmente usada.</p>
+                        <ul class="features">
+                            <li>✓ Ordenadas</li>
+                            <li>✓ Mutables</li>
+                            <li>✓ Acceso indexado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tuplas -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/tuples.png" alt="Tuplas">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tuplas</h3>
+                        <p>Colecciones ordenadas e inmutables. Perfectas para datos que no deben cambiar.</p>
+                        <ul class="features">
+                            <li>✓ Inmutables</li>
+                            <li>✓ Ordenadas</li>
+                            <li>✓ Hashables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejemplos Section -->
+    <section id="ejemplos" class="ejemplos">
+        <div class="container">
+            <h2 class="section-title">Ejemplos Prácticos</h2>
+            <p class="section-subtitle">Código real para entender mejor cada estructura</p>
+
+            <div class="ejemplos-grid">
+                <div class="ejemplo-card">
+                    <h3>Crear un Conjunto</h3>
+                    <pre><code>frutas = {'manzana', 'naranja', 'pera'}
+print(frutas)
+# {'manzana', 'naranja', 'pera'}
+
+# Agregar elemento
+frutas.add('plátano')
+
+# Verificar pertenencia
+if 'manzana' in frutas:
+    print("¡Sí tenemos manzana!")</code></pre>
+                </div>
+
+                <div class="ejemplo-card">
+                    <h3>Usar un Diccionario</h3>
+                    <pre><code>estudiante = {
+    'nombre': 'Ana',
+    'edad': 20,
+    'carrera': 'Ingeniería'
+}
+
+print(estudiante['nombre'])  # Ana
+
+# Modificar valor
+estudiante['edad'] = 21
+
+# Iterar
+for clave, valor in estudiante.items():
+    print(f"{clave}: {valor}")</code></pre>
+                </div>
+
+                <div class="ejemplo-card">
+                    <h3>Implementar una Pila</h3>
+                    <pre><code>pila = []
+
+# Apilar (push)
+pila.append(1)
+pila.append(2)
+pila.append(3)
+
+# Desapilar (pop)
+elemento = pila.pop()  # 3
+print(elemento)
+
+# Ver tope
+print(pila[-1])  # 2
+
+# Verificar si está vacía
+if pila:
+    print("La pila tiene elementos")</code></pre>
+                </div>
+
+                <div class="ejemplo-card">
+                    <h3>Usar una Cola</h3>
+                    <pre><code>from collections import deque
+
+cola = deque()
+
+# Encolar (enqueue)
+cola.append('tarea1')
+cola.append('tarea2')
+cola.append('tarea3')
+
+# Desencolar (dequeue)
+tarea = cola.popleft()  # 'tarea1'
+print(tarea)
+
+# Tamaño
+print(len(cola))  # 2
+
+# Verificar si está vacía
+if cola:
+    print("Hay tareas pendientes")</code></pre>
+                </div>
+
+                <div class="ejemplo-card">
+                    <h3>Comprensión de Listas</h3>
+                    <pre><code># Crear cuadrados
+cuadrados = [x**2 for x in range(10)]
+print(cuadrados)
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Filtrar números pares
+numeros = [1, 2, 3, 4, 5, 6]
+pares = [x for x in numeros if x % 2 == 0]
+print(pares)  # [2, 4, 6]
+
+# Transformar strings
+palabras = ['python', 'java', 'c++']
+mayusculas = [p.upper() for p in palabras]
+print(mayusculas)</code></pre>
+                </div>
+
+                <div class="ejemplo-card">
+                    <h3>Comparación de Complejidad</h3>
+                    <pre><code># Búsqueda en lista: O(n)
+lista = [1, 2, 3, 4, 5]
+if 3 in lista:  # Búsqueda lineal
+    print("Encontrado")
+
+# Búsqueda en conjunto: O(1)
+conjunto = {1, 2, 3, 4, 5}
+if 3 in conjunto:  # Búsqueda constante
+    print("Encontrado")
+
+# Búsqueda en diccionario: O(1)
+diccionario = {'a': 1, 'b': 2}
+if 'a' in diccionario:  # Búsqueda constante
+    print("Encontrado")</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparación Table -->
+    <section class="comparacion">
+        <div class="container">
+            <h2 class="section-title">Comparación de Estructuras</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Estructura</th>
+                            <th>Ordenada</th>
+                            <th>Mutable</th>
+                            <th>Duplicados</th>
+                            <th>Búsqueda</th>
+                            <th>Caso de Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Lista</strong></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>O(n)</td>
+                            <td>Datos ordenados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tupla</strong></td>
+                            <td>✓</td>
+                            <td>✗</td>
+                            <td>✓</td>
+                            <td>O(n)</td>
+                            <td>Datos inmutables</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conjunto</strong></td>
+                            <td>✗</td>
+                            <td>✓</td>
+                            <td>✗</td>
+                            <td>O(1)</td>
+                            <td>Elementos únicos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diccionario</strong></td>
+                            <td>✓*</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>O(1)</td>
+                            <td>Pares clave-valor</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pila</strong></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>O(1)</td>
+                            <td>LIFO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cola</strong></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>O(1)</td>
+                            <td>FIFO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">¿Preguntas?</h2>
+            <p class="section-subtitle">Contacta con nosotros para más información</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Email:</strong> torres0815@gmail.com</p>
+                    <p><strong>Autor:</strong> Samuel Torres Atehortua</p>
+                    <p><strong>Tema:</strong> Estructuras de Datos en Python</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Estructuras de Datos en Python. Todos los derechos reservados.</p>
+            <p>Autor: Samuel Torres Atehortua</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
